@@ -17,7 +17,7 @@ public class Basket {
     }
 
     public void addBook(Book book) {
-        if(currentNoOfBooksInBasket >= maxBooksInBasket) {
+        if (currentNoOfBooksInBasket >= maxBooksInBasket) {
             throw new IllegalArgumentException("Max number of books in basket");
         }
         books[currentNoOfBooksInBasket++] = book;

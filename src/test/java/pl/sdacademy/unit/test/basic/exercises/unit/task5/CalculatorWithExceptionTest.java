@@ -5,7 +5,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class CalculatorWithExceptionTest {
 
@@ -35,11 +36,11 @@ class CalculatorWithExceptionTest {
         //junit5
         assertThrows(
                 ArithmeticException.class,
-                () -> calculator.divide(2 , 0),
+                () -> calculator.divide(2, 0),
                 "Cannot divide by zero!");
 
         //assertj
-        assertThatThrownBy(() -> calculator.divide(2 ,0))
+        assertThatThrownBy(() -> calculator.divide(2, 0))
                 .hasMessage("Cannot divide by zero!")
                 .isInstanceOf(ArithmeticException.class);
     }

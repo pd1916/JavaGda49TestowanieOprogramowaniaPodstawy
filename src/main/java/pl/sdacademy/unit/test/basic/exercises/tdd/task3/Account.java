@@ -36,13 +36,13 @@ public class Account {
     }
 
     private void validateAccountNumber(Account account) {
-        if(account.getAccountNumber().length() != 26 || !account.getAccountNumber().matches("[0-9]+")) {
+        if (account.getAccountNumber().length() != 26 || !account.getAccountNumber().matches("[0-9]+")) {
             throw new IllegalArgumentException("Wrong account number: " + account.accountNumber);
         }
     }
 
     private void validateAmount(float amount) {
-        if(this.balance < amount || amount <= 0) {
+        if (this.balance < amount || amount <= 0) {
             throw new IllegalArgumentException("Wrong value of amount");
         }
     }

@@ -1,6 +1,7 @@
 package pl.sdacademy.unit.test.basic.exercises.tdd.task6;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
